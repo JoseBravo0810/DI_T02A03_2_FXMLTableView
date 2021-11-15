@@ -12,21 +12,26 @@ import javafx.beans.property.SimpleStringProperty;
  *
  * @author jose
  */
+
 public class Person {
+    // Atributos de la persona, nombre, appelido e email
    private final SimpleStringProperty firstName = new SimpleStringProperty("");
    private final SimpleStringProperty lastName = new SimpleStringProperty("");
    private final SimpleStringProperty email = new SimpleStringProperty("");
 
+   // Constructor vacio
     public Person() {
         this("", "", "");
     }
  
+    // Constructor completo
     public Person(String firstName, String lastName, String email) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
     }
 
+    // Metodos getter y setter
     public String getFirstName() {
         return firstName.get();
     }

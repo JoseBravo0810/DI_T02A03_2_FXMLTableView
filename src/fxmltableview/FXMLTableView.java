@@ -15,15 +15,23 @@ import javafx.stage.Stage;
  *
  * @author jose
  */
+
+// Clase main
 public class FXMLTableView extends Application {
     
+    // Metodo que se ejecuta al inicializar la aplicacion
     @Override
     public void start(Stage primaryStage) throws Exception {
+        // Establece titulo
        primaryStage.setTitle("FXML TableView Example");
+       // Carga el FXML
        Pane myPane = (Pane)FXMLLoader.load(getClass().getResource
     ("fxml_tableview.fxml"));
+       // Instancia la escena
        Scene myScene = new Scene(myPane);
+       // Establece la escena en la ventana
        primaryStage.setScene(myScene);
+       // Muestra la ventana 
        primaryStage.show();
     }
  

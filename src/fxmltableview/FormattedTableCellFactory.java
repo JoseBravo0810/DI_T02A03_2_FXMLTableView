@@ -17,11 +17,16 @@ import javafx.util.Callback;
  *
  * @author jose
  */
+
+// Clase para darle formato a la tabla (celdas), implementa funcion callback
 public class FormattedTableCellFactory<S, T> 
     implements Callback<TableColumn<S, T>, TableCell<S, T>> {
+    
+    // Atributos
     private TextAlignment alignment;
     private Format format;
  
+    // Setter y getters
     public TextAlignment getAlignment() {
         return alignment;
     }
@@ -38,6 +43,7 @@ public class FormattedTableCellFactory<S, T>
         this.format = format;
     }
     
+    // Sobreescribimos el metodo abstracto de la clase implementada
     @Override
     @SuppressWarnings("unchecked")
     public TableCell<S, T> call(TableColumn<S, T> p) {
@@ -62,6 +68,8 @@ public class FormattedTableCellFactory<S, T>
                 }
             }
         };
+        
+        // Alineamos el texto de las celdas
         cell.setTextAlignment(alignment);
         switch (alignment) {
             case CENTER:
